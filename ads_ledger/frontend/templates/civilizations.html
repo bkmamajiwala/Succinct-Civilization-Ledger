@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="topbar">
+  <div>
+    <p class="eyebrow">Registry</p>
+    <h1>Civilizations</h1>
+  </div>
+</section>
+<section class="grid two">
+  <form class="panel form" id="civilizationForm">
+    <h2>Register Civilization</h2>
+    <label>Name<input name="name" required placeholder="Gupta Empire"></label>
+    <label>Region<input name="region" placeholder="South Asia"></label>
+    <div class="inline">
+      <label>Start Year<input name="start_year" type="number" placeholder="-320"></label>
+      <label>End Year<input name="end_year" type="number" placeholder="550"></label>
+    </div>
+    <label>Notes<textarea name="notes" rows="4"></textarea></label>
+    <button type="submit">Register</button>
+  </form>
+  <div class="panel">
+    <h2>Saved Civilizations</h2>
+    <div id="civilizationList" class="list"></div>
+  </div>
+</section>
+{% endblock %}

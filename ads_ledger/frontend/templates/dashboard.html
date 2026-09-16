@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="topbar">
+  <div>
+    <p class="eyebrow">Research system</p>
+    <h1>Succinct Civilization Ledger</h1>
+    <p>Store historical events as assets and liabilities, compress the text and scores, then query by exact pattern or semantic meaning.</p>
+  </div>
+</section>
+
+<section class="grid two">
+  <div class="panel">
+    <h2>System Flow</h2>
+    <div class="flow">
+      <span>Wikipedia / DBpedia / Seshat / CSV</span>
+      <b>→</b><span>Ledger structuring</span>
+      <b>→</b><span>PostgreSQL or SQLite</span>
+      <b>→</b><span>FM Index + Wavelet Tree</span>
+      <b>→</b><span>Semantic AI + score</span>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Block Diagram</h2>
+    <div class="blocks">
+      <span>Frontend</span><span>Backend APIs</span><span>Database</span><span>Compression Engine</span><span>AI Engine</span>
+    </div>
+  </div>
+</section>
+
+<section class="grid three metrics" id="dashboardMetrics"></section>
+{% endblock %}

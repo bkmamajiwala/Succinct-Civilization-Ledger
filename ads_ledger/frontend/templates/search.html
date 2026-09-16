@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="topbar">
+  <div>
+    <p class="eyebrow">AI + compressed text</p>
+    <h1>Search</h1>
+    <p>Use semantic mode for ideas like “ethical governance”. Use exact mode for compressed FM-index pattern matches like “army”.</p>
+  </div>
+</section>
+<section class="panel searchbar">
+  <input id="searchQuery" placeholder="army, ethical governance, taxation, road systems">
+  <select id="searchMode"><option value="semantic">Semantic AI</option><option value="exact">Exact FM Index</option></select>
+  <select id="searchCivilization"><option value="">All civilizations</option></select>
+  <button id="searchButton">Search</button>
+</section>
+<section id="searchResults" class="list results"></section>
+{% endblock %}

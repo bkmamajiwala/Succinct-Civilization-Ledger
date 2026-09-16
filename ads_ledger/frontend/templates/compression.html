@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="topbar">
+  <div>
+    <p class="eyebrow">Succinct structures</p>
+    <h1>Compression Engine</h1>
+  </div>
+</section>
+<section class="grid two">
+  <div class="panel">
+    <h2>Index Stats</h2>
+    <pre id="compressionStats"></pre>
+  </div>
+  <div class="panel form">
+    <h2>Wavelet Tree Range Query</h2>
+    <div class="inline">
+      <label>Low<input id="rangeLow" type="number" value="50"></label>
+      <label>High<input id="rangeHigh" type="number" value="90"></label>
+    </div>
+    <button id="rangeButton">Run Query</button>
+    <pre id="rangeOutput"></pre>
+  </div>
+</section>
+<section class="panel prose">
+  <h2>How the Structures Connect</h2>
+  <p><strong>Suffix Array:</strong> all suffix positions of the ledger text sorted lexicographically. Pattern search becomes binary search over suffixes.</p>
+  <p><strong>BWT:</strong> the character before each suffix-array position. Similar contexts cluster together, so repeated historical language compresses well.</p>
+  <p><strong>FM Index:</strong> stores BWT plus occurrence counts and first-occurrence positions. Backward search finds a pattern without reconstructing the original descriptions.</p>
+  <p><strong>Wavelet Tree:</strong> stores numeric scores recursively by value ranges. It answers rank and range-count queries over values such as “how many scores are 50 to 90”.</p>
+</section>
+{% endblock %}
