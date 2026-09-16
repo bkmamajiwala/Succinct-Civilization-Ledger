@@ -1,0 +1,7 @@
+civilization,region,start_year,end_year,year,type,domain,value,description,source
+Roman Empire,Mediterranean,-27,476,117,Asset,Military,88,The army secured frontier defenses and expanded imperial roads.,sample_csv
+Roman Empire,Mediterranean,-27,476,180,Liability,Governance,62,Succession instability weakened administrative legitimacy.,sample_csv
+Maurya Empire,South Asia,-322,-185,-250,Asset,Governance,82,Ashoka promoted ethical rule welfare officers and public inscriptions.,sample_csv
+Maurya Empire,South Asia,-322,-185,-260,Liability,Military,48,The Kalinga war caused severe human losses despite strategic victory.,sample_csv
+Abbasid Caliphate,Middle East,750,1258,830,Asset,Scientific,91,Translation movements and observatories advanced mathematics medicine and astronomy.,sample_csv
+Abbasid Caliphate,Middle East,750,1258,945,Liability,Military,57,Regional armies and rival dynasties reduced central military control.,sample_csv

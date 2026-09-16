@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="topbar">
+  <div>
+    <p class="eyebrow">Ledger</p>
+    <h1>Assets and Liabilities</h1>
+  </div>
+</section>
+<section class="grid two">
+  <form class="panel form" id="ledgerForm">
+    <h2>Add Ledger Entry</h2>
+    <label>Civilization<select name="civilization_id" required></select></label>
+    <div class="inline">
+      <label>Year / Era<input name="year" type="number" required placeholder="-250"></label>
+      <label>Value<input name="value" type="number" step="0.1" required placeholder="80"></label>
+    </div>
+    <div class="inline">
+      <label>Type<select name="entry_type"><option>Asset</option><option>Liability</option></select></label>
+      <label>Domain<select name="domain"><option>Economic</option><option>Military</option><option>Governance</option><option>Scientific</option><option>Social</option></select></label>
+    </div>
+    <label>Description<textarea name="description" rows="5" required placeholder="The army defended frontier regions..."></textarea></label>
+    <button type="submit">Add Entry</button>
+  </form>
+  <div class="panel">
+    <h2>Compute AI Score</h2>
+    <label>Civilization<select id="scoreCivilization"></select></label>
+    <button id="scoreButton">Compute Score</button>
+    <pre id="scoreOutput"></pre>
+  </div>
+</section>
+<section class="panel">
+  <h2>Ledger Entries</h2>
+  <div id="ledgerList" class="table"></div>
+</section>
+{% endblock %}
